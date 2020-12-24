@@ -7,7 +7,7 @@ import SEO from "../components/seo";
 import Banner from "../components/banner";
 import About from "../components/about";
 import Service from "../components/service";
-import Work from "../components/work";
+import Disciplines from "../components/disciplines";
 import Blogs from "../components/blogs";
 import Testimonial from "../components/testimonial";
 import Contact from "../components/contact";
@@ -40,9 +40,9 @@ const IndexPage = ({ data }) => (
       })}
 
     {data.contentfulSiteInformation.menus
-      .filter(item => item === "Work")
+      .filter(item => item === "Disciplines")
       .map(t => {
-        return <Work key="Work" data={data.allContentfulWorks}></Work>;
+        return <Disciplines key="Disciplines" data={data.allContentfulDisciplines}></Disciplines>;
       })}
 
     {data.contentfulSiteInformation.menus
@@ -170,7 +170,7 @@ export const pageQuery = graphql`
         }
       }
     }
-    allContentfulWorks {
+    allContentfulDisciplines {
       edges {
         node {
           siteName

@@ -1,16 +1,17 @@
 import React, { Component } from "react";
 import Img from "gatsby-image";
 
-export default class work extends Component {
+export default class Disciplines extends Component {
+
   render() {
     const { data } = this.props;
     return (
-      <div className="work section" id="Work">
+      <div className="discipline section" id="Disciplines">
         <div className="container">
           <div className="section-head">
-            <h2 className="text-center">Work</h2>
+            <h2 className="text-center">Disciplines</h2>
           </div>
-          <ul className="work-list">
+          <ul className="discipline-list">
             {data.edges.map((item, index) => {
               return (
                 <li key={index} className="item">
