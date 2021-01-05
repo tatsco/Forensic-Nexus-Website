@@ -1,0 +1,8 @@
++ @jimp/plugin-color@0.16.1
+added 1 package and audited 2510 packages in 12.161s
+
+181 packages are looking for funding
+  run `npm fund` for details
+
+found 5 high severity vulnerabilities
+  run `npm audit fix` to fix them, or `npm audit` for details
