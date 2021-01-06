@@ -13,20 +13,20 @@ module.exports = {
     author: `@tatsco`
   },
   plugins: [
-    `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
         // The property ID; the tracking code won't be generated without it
         trackingId: GOOGLE_ANALYTICS_TRACKING_ID,
         // Defines where to place the tracking script - `true` in the head and `false` in the body
-        head: false,
+        head: true,
         exclude: ["/preview/**", "/do-not-track/me/too/"],
         sampleRate: 5,
         siteSpeedSampleRate: 10,
         cookieDomain: "example.com",
       },
     },
+    `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
