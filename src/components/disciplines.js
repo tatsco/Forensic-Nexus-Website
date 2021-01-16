@@ -16,7 +16,7 @@ export default class Disciplines extends Component {
               return (
                 <li key={index} className="item">
                   <div className="inner">
-                    <a href={item.node.url}>
+                    <a href={item.node.url} target="_blank">
                       <Img
                         fluid={item.node.image.fluid}
                         objectFit="cover"

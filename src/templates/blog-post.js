@@ -9,7 +9,6 @@ import Share from "../components/share";
 export default class blogPost extends Component {
   render() {
     const data = this.props.data.contentfulBlogs;
-
     const siteurl = this.props.data.contentfulSiteInformation.siteUrl + "/";
     const twiteerhandle = this.props.data.contentfulSiteInformation
       .twiteerHandle;
@@ -18,17 +17,17 @@ export default class blogPost extends Component {
         siteMetadata: { siteurl, twiteerhandle }
       },
       title: data.title,
-      slug: data.slug
+      slug: data.slug,
+      image: data.featureImage.fluid.src
     };
-
     return (
       <Layout>
         <SEO
           title={data.title}
           keywords={[
             `Tatiana Scott`,
-            `Software Developer`,
-            `Developer`,
+            `Forensic Scientist`,
+            `Forensic Nexus`,
             `${data.title}`
           ]}
         />
@@ -59,7 +58,8 @@ export default class blogPost extends Component {
                 ...socialConfigss.site.siteMetadata.twiteerhandletitle,
                 config: {
                   url: `${siteurl}${socialConfigss.slug}`,
-                  title: `${socialConfigss.title}`
+                  title: `${socialConfigss.title}`,
+                  image: `${socialConfigss.image}`
                 }
               }}
             />
